@@ -1,0 +1,89 @@
+.pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 62rem;
+}
+.pagina__descripcion {
+  margin: 0;
+  color: var(--texto-suave);
+}
+
+.barra-herramientas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Panel */
+.rejilla-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1rem;
+}
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.25rem;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-left: 6px solid var(--verde);
+  border-radius: var(--radio);
+}
+.tarjeta__destacado {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+.tarjeta__datos {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 1rem;
+  margin: 0;
+}
+.tarjeta__datos dt {
+  color: var(--texto-suave);
+}
+.tarjeta__datos dd {
+  margin: 0;
+}
+
+/* Formularios */
+.formulario,
+.inicio-sesion__formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 28rem;
+}
+.inicio-sesion {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+.inicio-sesion__formulario {
+  width: 100%;
+  padding: 2rem;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+}
+
+/* Catalogo */
+.precio {
+  display: inline-flex;
+  flex-direction: column;
+}
+.precio__original {
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
