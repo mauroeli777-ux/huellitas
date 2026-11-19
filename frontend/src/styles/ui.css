@@ -1,0 +1,152 @@
+/* Boton */
+.boton {
+  padding: 0.6rem 1.1rem;
+  border: 1px solid transparent;
+  border-radius: var(--radio);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.boton--primario {
+  color: #fff;
+  background: var(--verde);
+}
+.boton--primario:hover:not(:disabled) {
+  background: var(--verde-oscuro);
+}
+.boton--secundario {
+  color: var(--verde-oscuro);
+  background: var(--superficie);
+  border-color: var(--verde);
+}
+.boton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Campos */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 14rem;
+}
+.campo__etiqueta {
+  font-weight: 600;
+}
+.campo__obligatorio {
+  color: var(--error);
+}
+.campo__control {
+  padding: 0.55rem 0.7rem;
+  font: inherit;
+  color: var(--texto);
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+}
+.campo--con-error .campo__control {
+  border-color: var(--error);
+  background: var(--error-fondo);
+}
+.campo__ayuda {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+.campo__error {
+  margin: 0;
+  color: var(--error);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Tabla */
+.tabla-contenedor {
+  overflow-x: auto;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+}
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tabla th,
+.tabla td {
+  padding: 0.7rem 0.9rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--borde);
+}
+.tabla th {
+  background: var(--verde-claro);
+  white-space: nowrap;
+}
+.tabla tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* Insignia y alerta */
+.insignia {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.insignia--exito {
+  color: var(--exito);
+  background: var(--exito-fondo);
+}
+.insignia--aviso {
+  color: var(--aviso);
+  background: var(--aviso-fondo);
+}
+.insignia--peligro {
+  color: var(--error);
+  background: var(--error-fondo);
+}
+.insignia--neutro {
+  color: var(--texto-suave);
+  background: #e8ede9;
+}
+
+.alerta {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radio);
+  border: 1px solid;
+}
+.alerta--exito {
+  color: var(--exito);
+  background: var(--exito-fondo);
+  border-color: var(--verde);
+}
+.alerta--error {
+  color: var(--error);
+  background: var(--error-fondo);
+  border-color: var(--error);
+}
+.alerta--aviso {
+  color: var(--aviso);
+  background: var(--aviso-fondo);
+  border-color: var(--aviso);
+}
+
+/* Estados de carga */
+.estado-datos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+  color: var(--texto-suave);
+}
+.estado-datos--vacio {
+  padding: 1.5rem;
+  background: var(--superficie);
+  border: 1px dashed var(--borde);
+  border-radius: var(--radio);
+  align-items: center;
+}

@@ -1,0 +1,83 @@
+.aplicacion {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  min-height: 100vh;
+}
+
+.barra-lateral {
+  padding: 1.5rem 1rem;
+  color: #fff;
+  background: var(--verde-bosque);
+}
+.barra-lateral__marca {
+  margin: 0 0 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.barra-lateral__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.barra-lateral__enlace {
+  display: block;
+  padding: 0.6rem 0.8rem;
+  color: #e3efe8;
+  text-decoration: none;
+  border-radius: var(--radio);
+}
+.barra-lateral__enlace:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.barra-lateral__enlace--activo {
+  color: var(--verde-bosque);
+  font-weight: 700;
+  background: #fff;
+}
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--superficie);
+  border-bottom: 1px solid var(--borde);
+}
+.encabezado__usuario {
+  margin: 0;
+  font-weight: 600;
+}
+.encabezado__rol {
+  color: var(--texto-suave);
+  font-weight: 400;
+}
+
+.aplicacion__contenido {
+  padding: 1.5rem;
+}
+
+@media (max-width: 760px) {
+  .aplicacion {
+    grid-template-columns: 1fr;
+  }
+  .barra-lateral {
+    padding: 0.75rem 1rem;
+  }
+  .barra-lateral__marca {
+    margin-bottom: 0.5rem;
+  }
+  .barra-lateral__lista {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .barra-lateral__enlace {
+    white-space: nowrap;
+  }
+  .encabezado {
+    justify-content: space-between;
+  }
+}
